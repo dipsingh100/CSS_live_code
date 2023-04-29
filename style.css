@@ -1,0 +1,185 @@
+body{
+    /* background-color: aqua; */
+    box-sizing: border-box;
+    background-image: linear-gradient(rgb(203 231 239) 10%, white 90%);
+}
+
+.header{
+    height: 6.5vh;
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: first baseline;
+    background-color: black;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+
+.btn-cont button{
+    background-color: white;
+    width: 50px;
+    height: 30px;
+    color: black;
+    border-radius: 5px;
+    border: none;
+    font-size: 10px;
+}
+
+.btn-cont button:hover{
+    background-color: blue;
+}
+
+.text-container{
+    text-align: center;
+    padding: 20px 0;
+    font-size: 20px;
+    font-weight: 600;
+    transition: transform 2s;
+    cursor: pointer;
+}
+
+.text-container:hover{
+    transform: scale(1.5,1.5);
+}
+
+.cards-container{
+    border: 5px solid black;
+    height: 50vh;
+    border-radius: 10px;
+    background-image: linear-gradient(pink, rgb(92, 143, 252) 60%, pink);
+}
+
+.boxes{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    animation: updown 1s infinite alternate ease-in-out;
+}
+
+@keyframes updown{
+    0%{
+        transform: translateY(-12px);
+    }
+    100%{
+        transform: translateY(35px);
+    }
+}
+
+.cards{
+    width: 21vw;
+    height: 30vh;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    font-size: 12px;
+}
+
+.images{
+    width: 90%;
+    height: 75%;
+    background-size: cover;
+    background-position: center;
+    margin: 15px 0;
+}
+
+#image1{
+    background-image: url("jobs.jpg");
+}
+#image2{
+    background-image: url("techjobs.webp");
+}
+#image3{
+    background-image: url("careers.jpg");
+}
+
+.text{
+    text-align: center;
+    margin-top:5%;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.footer{
+    width: 99%;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(185, 184, 184);
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+@media screen and (max-width:900px){
+    .header{
+        height: 5.5vh;
+    }
+    .btn-cont button{
+        width: 60px;
+        height: 45px;
+        font-size: 12px;
+    }
+
+    .text-container{
+        font-size: 25px;
+        padding: 50px 120px;
+    }
+    .boxes{
+        
+    }
+    .cards{
+        width: 100%;
+    }
+
+    .cards-container{
+        height: unset;
+    }
+
+    .images{
+        width: 100%;
+    }
+    .text{
+        font-size: 2rem;
+    }
+
+}
+@media screen and (max-width:500px){
+    .btn-cont{
+        display: none;
+    }
+    .text-container{
+        padding: 50px 120px;
+    }
+    .boxes{
+        flex-direction: column;
+    }
+    .cards{
+        width: 100%;
+    }
+
+    .cards-container{
+        height: unset;
+    }
+
+    .text{
+        font-size: 2rem;
+    }
+
+    .footer{
+        position: static;
+        margin-top: 10vh;
+    }
+}
